@@ -1,0 +1,26 @@
+@font-face {
+  font-family: 'Nunito300';
+  src: url("../fonts/NunitoSans_7pt-Regular.ttf");
+}
+
+@font-face {
+  font-family: 'Nunito600';
+  src: url("../fonts/NunitoSans_7pt-SemiBold.ttf");
+}
+
+@font-face {
+  font-family: 'Nunito800';
+  src: url("../fonts/NunitoSans_7pt-Bold.ttf");
+}
+
+$home-font: 0.87rem;
+$detail-font: 1rem;
+$font-regular: 'Nunito300';
+$font-semi: 'Nunito600';
+$font-bold: 'Nunito800';
+$dark-Blue-: hsl(209, 23%, 22%); //(Dark Mode Elements)
+$very-Dark-Blue: hsl(207, 26%, 17%); //(Dark Mode Background)
+$very-Dark-Blue: hsl(200, 15%, 8%); //(Light Mode Text)
+$dark-Gray: hsl(0, 0%, 52%); //(Light Mode Input)
+$very-Light-Gray: hsl(0, 0%, 95%); //(Light Mode Background)
+$white: hsl(0, 0%, 100%); //(Dark Mode Text & Light Mode Elements)

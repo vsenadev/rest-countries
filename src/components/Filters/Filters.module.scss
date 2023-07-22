@@ -1,0 +1,57 @@
+@import '../../assets/styles/__variables.scss';
+
+.container{
+  display: flex;
+  width: 100%;
+  justify-content: center;
+
+  &__div{
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    margin-top: 1.5%;
+
+    &_input{
+      width: 23%;
+      height: 4.5vh;
+      text-indent: 2.5vw;
+      font-size: 0.7vw;
+      font-family: $font-regular;
+      color: $dark-Gray;
+      background: $white url("../../assets/images/search-svgrepo-com.svg") no-repeat 3%;
+      border-radius: 2px;
+      border-color: $dark-Gray;
+      border-width: 0;
+      box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    }
+
+    &_input::placeholder{
+      color: #c4c4c4;
+      font-family: $font-regular;
+    }
+
+    &_input:focus{
+      outline: none;
+    }
+
+    &_select{
+      width: 12vw;
+      height: 4.5vh;
+      padding-left: 1rem;
+      box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+      font-size: 0.7vw;
+      font-family: $font-regular;
+      color: $dark-Gray;
+      background: $white;
+      border: none ;
+    }
+
+    &_select:focus{
+      outline: none;
+    }
+
+    &_option{
+      border-width: 0;
+    }
+  }
+}
