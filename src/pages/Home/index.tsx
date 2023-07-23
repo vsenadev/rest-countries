@@ -3,6 +3,7 @@ import Filters from "../../components/Filters";
 import axios, {AxiosError, AxiosResponse} from "axios";
 import React, {useEffect, useState} from "react";
 import {ICountries} from "../../interface/ICountries";
+import Cards from "../../components/Cards";
 
 export default function Home( ){
     const [countries, setCountries] = useState<ICountries[]>([]);
@@ -23,7 +24,7 @@ export default function Home( ){
             <Header/>
             <main>
                 <Filters/>
-
+                <Cards data={countries}/>
             </main>
         </>
     )

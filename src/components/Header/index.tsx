@@ -5,7 +5,7 @@ export default function Header(){
     return(
         <header>
             <section className={styles.container}>
-                <h1 className={styles.container__title}>Where in the world</h1>
+                <h1 className={styles.container__title}>Where in the world ?</h1>
                 <div className={styles.container__div}>
                     <DarkModeLogo />
                     <span>Dark Mode</span>
