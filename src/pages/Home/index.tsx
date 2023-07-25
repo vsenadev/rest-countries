@@ -4,9 +4,11 @@ import axios, {AxiosError, AxiosResponse} from "axios";
 import React, {useEffect, useState} from "react";
 import {ICountries} from "../../interface/ICountries";
 import Cards from "../../components/Cards";
+import styles from "./Home.module.scss";
 
 export default function Home( ){
     const [countries, setCountries] = useState<ICountries[]>([]);
+    const [darkMode, setDarkMode] = useState(false)
 
     async function getAllCountries() {
         await axios.get(`https://restcountries.com/v3.1/all?fields=name,flags,capital,population,region,subregion,tld,currencies,languages`)
@@ -21,10 +23,15 @@ export default function Home( ){
 
     return(
         <>
-            <Header/>
-            <main>
+            <Header
+                darkMode={darkMode}
+                setDarkMode={setDarkMode}
+            />
+            <main className={`${darkMode ? styles.dark_mode_home : ""}`}>
                 <Filters/>
-                <Cards data={countries}/>
+                <Cards
+                    data={countries}
+                />
             </main>
         </>
     )
