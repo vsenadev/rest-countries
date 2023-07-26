@@ -32,3 +32,8 @@ header{
   background-color: $dark-Blue;
   color: $white;
 }
+
+.dark_mode_container{
+  background-color: $dark-Blue;
+  border-bottom: $very-Dark-Blue solid 1px;
+}

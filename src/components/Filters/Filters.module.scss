@@ -25,25 +25,45 @@
       box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
     }
 
-    &_input::placeholder{
+    &_input::placeholder, &_input_dark::placeholder{
       color: #c4c4c4;
       font-family: $font-regular;
     }
 
-    &_input:focus{
+    &_input:focus, &_input_dark:focus{
       outline: none;
     }
 
-    &_select{
+    &_input_dark{
+      width: 23%;
+      height: 4.5vh;
+      text-indent: 2.5vw;
+      font-size: 0.7vw;
+      font-family: $font-regular;
+      color: $white;
+      background: $dark-Blue url("../../assets/images/search-white.svg") no-repeat 3%;
+      border-radius: 2px;
+      border-color: $dark-Gray;
+      border-width: 0;
+      box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
+    }
+
+    &_select, .select_dark{
       width: 12vw;
       height: 4.5vh;
+      border-radius: 2px;
       padding-left: 1rem;
-      box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+      box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
       font-size: 0.7vw;
       font-family: $font-regular;
       color: $dark-Gray;
       background: $white;
       border: none ;
+    }
+
+    .select_dark{
+      background: $dark-Blue;
+      color: $white;
     }
 
     &_select:focus{

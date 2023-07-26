@@ -28,9 +28,13 @@ export default function Home( ){
                 setDarkMode={setDarkMode}
             />
             <main className={`${darkMode ? styles.dark_mode_home : ""}`}>
-                <Filters/>
+                <Filters
+                    darkMode={darkMode}
+                    setDarkMode={null}/>
                 <Cards
                     data={countries}
+                    darkMode={darkMode}
+                    setDarkMode={null}
                 />
             </main>
         </>
