@@ -10,12 +10,13 @@
     flex-wrap: wrap;
     margin-top: 3%;
     width: 97%;
-    justify-content: space-evenly;
-    gap: 0 4.4rem;
+    justify-content: flex-start;
+    margin-left: 6rem;
+    gap: 0 9rem;
 
     &_div_dark_card{
-      width: 17%;
-      height: 1.5%;
+      width: 20rem;
+      height: 24rem;
       display: flex;
       flex-wrap: wrap;
       flex-direction: column;
@@ -28,8 +29,8 @@
     }
 
     &_div{
-      width: 17%;
-      height: 1.5%;
+      width: 20rem;
+      height: 24rem;
       display: flex;
       flex-wrap: wrap;
       flex-direction: column;
