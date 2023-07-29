@@ -12,7 +12,13 @@
     width: 97%;
     justify-content: flex-start;
     margin-left: 6rem;
-    gap: 0 9rem;
+    gap: 2rem 9rem;
+
+    &_empty{
+      text-decoration: none;
+      text-underline: none;
+      color: inherit;
+    }
 
     &_div_dark_card{
       width: 20rem;
@@ -74,5 +80,17 @@
         }
       }
     }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .container__section{
+    justify-content: center;
+    margin: 0;
+  }
+
+  .mobile_container__section{
+    height: 22rem;
+    margin-bottom: 2rem;
   }
 }

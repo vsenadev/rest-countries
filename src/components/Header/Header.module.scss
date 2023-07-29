@@ -37,3 +37,12 @@ header{
   background-color: $dark-Blue;
   border-bottom: $very-Dark-Blue solid 1px;
 }
+
+@media screen and (max-width: 768px){
+  .mobile__container{
+    display: flex;
+    align-items: center;
+    font-size: 12px;
+    height: 4rem;
+  }
+}
