@@ -23,17 +23,14 @@ export interface ICountries  {
     "tld": [
         string
     ],
-    "currencies": {
-        "USD": {
-            "name": string,
-            "symbol": string
-        }
-    }
+    "currencies": {} | any
     "capital": [
         string
     ],
     "region": string,
     "subregion": string,
     "languages": { [key: string]: string},
-    "population": number
+    "population": number,
+    "altSpellings": string[],
+    "borders": string[]
 }

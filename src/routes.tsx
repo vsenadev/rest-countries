@@ -7,7 +7,7 @@ export default function AppRouter() {
         <BrowserRouter>
             <Routes>
                 <Route element={<Home/>} path="/"/>
-                <Route element={<Detail darkMode setDarkMode={null}/>} path="/country/:common"/>
+                <Route element={<Detail />} path="/:state/country/:common"/>
             </Routes>
         </BrowserRouter>
     )

@@ -14,9 +14,9 @@ export default function Cards(props: blendedInterface){
         <section className={styles.container}>
             <section className={styles.container__section}>
                 {
-                    props.data.map((element: ICountries, index: number) => {
+                    props.data.map((element: ICountries) => {
                         return(
-                            <Link to={`/country/${element.name.common}`} className={styles.container__section_empty} key={`${element.name.common}`}>
+                            <Link to={`/${props.darkMode}/country/${element.name.common}`} className={styles.container__section_empty} key={`${element.name.common}`}>
                                 <div key={`${element.name.common}`} className={` ${styles.mobile_container__section} ${props.darkMode ? styles.container__section_div_dark_card : styles.container__section_div}`}>
                                     <div className={styles.container__section_div_div}>
                                         <img src={element.flags.png} alt={element.name.official} className={styles.container__section_div_div_img}/>
