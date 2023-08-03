@@ -3,6 +3,7 @@ import Header from "../../components/Header";
 import {useNavigate, useParams} from "react-router-dom";
 import {useEffect, useState} from "react";
 import {ReactComponent as Back} from "../../assets/images/back-svgrepo-com.svg";
+import {ReactComponent as BackWhite} from "../../assets/images/backwhite.svg";
 import BorderCountries from "./BorderCountries";
 import http from "../../environments/environment";
 import {AxiosError, AxiosResponse} from "axios";
@@ -37,20 +38,25 @@ export default function Detail(){
     }, [common]);
 
     return(
-        <>
+        <section className={darkMode ? styles.dark_mode__container : ''}>
             <Header
                 darkMode={darkMode}
                 setDarkMode={setDarkMode}
             />
-            <section className={styles.container}>
+            <section className={`${styles.container}`}>
                 {
                     country?.map((element: ICountries) => {
                         const coin: [] | any  = Object.values(element.currencies);
                         const languages: [] | any = Object.values(element.languages);
                         return(
                             <>
-                                <div className={styles.container__back} onClick={() => backForHome()}>
-                                    <Back />
+                                <div className={`${styles.container__back} ${darkMode ? styles.dark_mode__container_back : ''}`} onClick={() => backForHome()}>
+                                    {
+                                        darkMode ?
+                                            <BackWhite />
+                                            :
+                                            <Back />
+                                    }
                                     <span>Back</span>
                                 </div>
                                 <div className={styles.container__content}>
@@ -69,14 +75,15 @@ export default function Detail(){
                                             <span className={styles.container__content_description_div_title}>Currencies: <span className={styles.container__content_description_div_info}>{coin[0]['name']}</span></span>
                                             <span className={styles.container__content_description_div_title}>Languages: {languages.map((value : string) => {return (<span className={styles.container__content_description_div_info}>{value}  </span>)})}</span>
                                         </div>
+                                        <BorderCountries  countries={element.borders} darkMode={darkMode} setDarkMode={null}/>
                                     </div>
-                                    <BorderCountries  countries={element.borders}/>
+
                                 </div>
                             </>
                         )
                     })
                 }
             </section>
-        </>
+        </section>
     )
 }

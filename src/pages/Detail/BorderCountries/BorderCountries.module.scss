@@ -1,0 +1,51 @@
+@import "../../../assets/styles/_variables";
+
+.container{
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  margin-top: 3rem;
+
+  &__title{
+    font-size: 1rem;
+    font-family: $font-semi;
+  }
+
+  &__div{
+    display: flex;
+    gap: 1.5rem;
+
+    &_card{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: $font-regular;
+      width: 5rem;
+      height: 2.1rem;
+      border-radius: 4px;
+      box-shadow: rgba(0, 0, 0, 0.15) 0 5px 15px 0;
+    }
+  }
+}
+
+.darkmode_container__div_card{
+    background-color: $dark-Blue;
+}
+
+@media screen and (max-width: 768px){
+  .container{
+    margin-top: 0;
+    flex-wrap: wrap;
+
+    &__title{
+      font-size: 0.8rem;
+      width: 100%;
+      margin-bottom: -1rem  ;
+    }
+
+    &__div{
+      flex-wrap: wrap;
+      gap: 0.8rem;
+    }
+  }
+}
