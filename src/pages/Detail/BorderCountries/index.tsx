@@ -12,9 +12,9 @@ export default function BorderCountries(props: IBorderCountries){
                 <h2 className={styles.container__title}>Border countries: </h2>
                 <div className={styles.container__div}>
                     {
-                        props.countries?.map((element: string) => {
+                        props.countries?.map((element: string, index: number) => {
                             return(
-                                <span className={`${styles.container__div_card} ${props.darkMode ? styles.darkmode_container__div_card : ''} `}>{element}</span>
+                                <span className={`${styles.container__div_card} ${props.darkMode ? styles.darkmode_container__div_card : ''} `} key={`${element} ${index}`}>{element}</span>
                             )
                         })
                     }

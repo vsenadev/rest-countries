@@ -1,3 +1,4 @@
+import React from "react";
 import styles from "./Detail.module.scss";
 import Header from "../../components/Header";
 import {useNavigate, useParams} from "react-router-dom";
@@ -45,12 +46,12 @@ export default function Detail(){
             />
             <section className={`${styles.container}`}>
                 {
-                    country?.map((element: ICountries) => {
+                    country?.map((element: ICountries, index: number) => {
                         const coin: [] | any  = Object.values(element.currencies);
                         const languages: [] | any = Object.values(element.languages);
                         return(
-                            <>
-                                <div className={`${styles.container__back} ${darkMode ? styles.dark_mode__container_back : ''}`} onClick={() => backForHome()}>
+                            <React.Fragment key={`${element.name.common} ${index}`}>
+                                <div className={`${styles.container__back} ${darkMode ? styles.dark_mode__container_back : ''}`} onClick={() => backForHome()} >
                                     {
                                         darkMode ?
                                             <BackWhite />
@@ -73,13 +74,12 @@ export default function Detail(){
                                             <span className={styles.container__content_description_div_title}>Capital: <span className={styles.container__content_description_div_info}>{element.capital}</span></span>
                                             <span className={styles.container__content_description_div_title}>Top Level Domain: <span className={styles.container__content_description_div_info}>{element.tld}</span></span>
                                             <span className={styles.container__content_description_div_title}>Currencies: <span className={styles.container__content_description_div_info}>{coin[0]['name']}</span></span>
-                                            <span className={styles.container__content_description_div_title}>Languages: {languages.map((value : string) => {return (<span className={styles.container__content_description_div_info}>{value}  </span>)})}</span>
+                                            <span className={styles.container__content_description_div_title}>Languages: {languages.map((value : string) => {return (<span className={styles.container__content_description_div_info} key={`${value} ${index}`}>{value}  </span>)})}</span>
                                         </div>
                                         <BorderCountries  countries={element.borders} darkMode={darkMode} setDarkMode={null}/>
                                     </div>
-
                                 </div>
-                            </>
+                            </React.Fragment>
                         )
                     })
                 }
